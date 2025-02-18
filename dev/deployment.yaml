@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
         - name: playground
-          image: wil42/playground:v2
+          image: wil42/playground:v1
           ports:
             - containerPort: 8888  # Matches app's listening port
-          livenessProbe:
+          livenessProbe: # Checks when the service is ready/available
             httpGet:
               path: /
               port: 8888
